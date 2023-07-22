@@ -20,21 +20,18 @@ const Hero = () => {
 
       <HeroBackground />
 
-      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-0 lg:my-90 lg:-mt-2 lg:py-40 ">
+      <div className="lg:my-90 -mt-36 flex flex-col items-center justify-center sm:-mt-0 lg:-mt-2 lg:py-40 ">
         <div
           className={`relative flex flex-col items-center justify-center ${spaceGrotesk.className}   `}
         >
-            <motion.div
-              style={{
-                pointerEvents: "none",
-                transform: "translateY(0px) translateX(0px)",
-              }}
-            >
-              <Logo
-                width={100}
-                height={100}
-              />
-            </motion.div>
+          <motion.div
+            style={{
+              pointerEvents: "none",
+              transform: "translateY(0px) translateX(0px)",
+            }}
+          >
+            <Logo width={100} height={100} />
+          </motion.div>
         </div>
       </div>
     </motion.section>

@@ -17,7 +17,6 @@ export default function AnimatedBody({
   charSpace,
   delay,
 }: AnimatedBodyProps) {
-
   const ctrls = useAnimation();
 
   const { ref, inView } = useInView({

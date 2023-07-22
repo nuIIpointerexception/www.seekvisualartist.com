@@ -16,7 +16,6 @@ export default function AnimatedTitle({
   wordSpace,
   charSpace,
 }: AnimatedTitleProps) {
-
   const ctrls = useAnimation();
 
   const { ref, inView } = useInView({

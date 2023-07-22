@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Seek Visual Artist - Designer and Developer",
     description:
-    "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
+      "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
     url: "https://www.seekvisualartist.com/",
     siteName: "www.seekvisualartist.com",
     images: [
@@ -66,12 +66,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Seek Visual Artist - Designer and Developer",
     description:
-    "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
+      "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
     creator: "SeekVFX",
     creatorId: "0000000000",
-    images: [
-      "./metadata.jpg",
-    ],
+    images: ["./metadata.jpg"],
   },
   robots: {
     index: true,

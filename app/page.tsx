@@ -39,11 +39,12 @@ export default function Home() {
       <Blur />
       <Color />
       <NavBar />
-      <main className="flex flex-col items-center justify-center"
-            style={{
-              backgroundColor: "#000000",
-            }}
-            >
+      <main
+        className="flex flex-col items-center justify-center"
+        style={{
+          backgroundColor: "#000000",
+        }}
+      >
         <Hero />
         <About />
         <Work />
