@@ -1,0 +1,44 @@
+@screen sm {
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -340%;
+    }
+  }
+  .animate {
+    animation: marquee 20s linear infinite;
+    transform: translate(0, -50%);
+  }
+}
+
+@screen md {
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -355%;
+    }
+  }
+  .animate {
+    animation: marquee 20s linear infinite;
+    transform: translate(0, -50%);
+  }
+}
+
+@screen lg {
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -300%;
+    }
+  }
+  .animate {
+    animation: marquee 20s linear infinite;
+    transform: translate(0, -50%);
+  }
+}
