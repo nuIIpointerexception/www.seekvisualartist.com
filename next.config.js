@@ -1,17 +1,30 @@
+// @ts-check
+
+const isProduction = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compiler: {
+    reactRemoveProperties: isProduction,
+    removeConsole: isProduction,
+    styledComponents: {
+      displayName: !isProduction,
+      minify: isProduction,
+      pure: true,
+    },
+  },
+  devIndicators: {
+    buildActivityPosition: "top-right",
+  },
   experimental: {
+    legacyBrowsers: false,
+    swcFileReading: true,
     appDir: true,
   },
   optimizeFonts: true,
-  images: {
-    domains: [
-      "user-images.githubusercontent.com",
-      "raw.githubusercontent.com",
-      "cdn.hashnode.com",
-      "media.tenor.com",
-    ], // TODO: Add everything to one repo.-
-  },
+  productionBrowserSourceMaps: !isProduction,
+  swcMinify: !isProduction,
+  images: {},
 };
 
 module.exports = nextConfig;

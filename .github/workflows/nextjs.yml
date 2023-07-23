@@ -43,11 +43,3 @@ jobs:
       - run: |
           echo "${{ secrets.ENV_FILE }}" > .env.local
       - run: npm run build --if-present
-
-  run:
-    needs: build
-    runs-on: self-hosted
-
-    steps:
-      - run: npx kill-port 8001
-      - run: bash ./start.sh
