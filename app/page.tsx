@@ -18,7 +18,6 @@ const Footer = dynamic(() => import("./sections/Footer"));
 
 export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const blobityInstance = useBlobity(initialBlobityOptions);
 
   useEffect(() => {
     window.scrollTo({
