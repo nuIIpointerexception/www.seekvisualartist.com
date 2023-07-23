@@ -22,9 +22,11 @@ const nextConfig = {
     appDir: true,
   },
   optimizeFonts: true,
-  productionBrowserSourceMaps: !isProduction,
+  productionBrowserSourceMaps: isProduction,
   swcMinify: !isProduction,
-  images: {},
+  images: {
+    domains: ["raw.githubusercontent.com"],
+  },
 };
 
 module.exports = nextConfig;
