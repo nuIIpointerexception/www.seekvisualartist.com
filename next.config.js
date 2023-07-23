@@ -3,9 +3,14 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  optimizeFonts: false,
+  optimizeFonts: true,
   images: {
-    domains: ["user-images.githubusercontent.com", "raw.githubusercontent.com", "cdn.hashnode.com", "media.tenor.com"], // TODO: Add everything to one repo.-
+    domains: [
+      "user-images.githubusercontent.com",
+      "raw.githubusercontent.com",
+      "cdn.hashnode.com",
+      "media.tenor.com",
+    ], // TODO: Add everything to one repo.-
   },
 };
 
