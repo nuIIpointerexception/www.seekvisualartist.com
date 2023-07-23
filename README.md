@@ -1,5 +1,5 @@
 # <https://www.seekvisualartist.com>
 
-## Preview
+## Preview (not yet)
 
 ![Preview](./public/metadata.jpg)
