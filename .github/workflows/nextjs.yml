@@ -39,4 +39,5 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npx kill-port 3000
-      - run: nohup npm run start
+      - run: nohup npm run start &
+      - run: disown %%
