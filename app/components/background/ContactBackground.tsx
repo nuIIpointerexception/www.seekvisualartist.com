@@ -4,20 +4,11 @@ import "./background.css";
 const ContactBackground: React.FC = () => {
   return (
     <div>
-      <video
-        className="contact"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-      >
+      <video className="contact" autoPlay loop muted playsInline preload="auto">
         <source src="/contact.mp4" type="video/mp4" />
         <source src="/contact.png" type="video/mp4" />
       </video>
-        <div
-          className="contact-bg"
-        />
+      <div className="contact-bg" />
     </div>
   );
 };

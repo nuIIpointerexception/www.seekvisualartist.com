@@ -2,7 +2,7 @@
 import Hero from "./sections/Hero";
 import useBlobity from "blobity/lib/react/useBlobity";
 import { useEffect } from "react";
-import { ScrollerMotion } from "scroller-motion";
+/* TODO: Decide wether i should use this. import { ScrollerMotion } from "scroller-motion"; */
 import PreLoader from "./components/other/PreLoader";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
 import NavBar from "./sections/NavBar";
@@ -17,14 +17,8 @@ const Contact = dynamic(() => import("./sections/Contact"));
 const Footer = dynamic(() => import("./sections/Footer"));
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const blobityInstance = useBlobity(initialBlobityOptions);
-
-  useEffect(() => {
-    if (blobityInstance.current) {
-      // @ts-ignore
-      window.blobity = blobityInstance.current;
-    }
-  }, [blobityInstance]);
 
   useEffect(() => {
     window.scrollTo({

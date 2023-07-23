@@ -5,16 +5,12 @@ import { useInView } from "react-intersection-observer";
 type AnimatedBodyProps = {
   text: string;
   className?: string;
-  wordSpace?: string;
-  charSpace?: string;
   delay?: number;
 };
 
 export default function AnimatedBody({
   text,
   className,
-  wordSpace,
-  charSpace,
   delay,
 }: AnimatedBodyProps) {
   const ctrls = useAnimation();

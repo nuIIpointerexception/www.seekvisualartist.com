@@ -53,7 +53,7 @@ export default function AnimatedTitle({
   };
 
   return (
-    <h2 aria-label={text} role="heading" className={className}>
+    <h2 aria-label={text} className={className}>
       {text.split(" ").map((word, index) => {
         return (
           <motion.span

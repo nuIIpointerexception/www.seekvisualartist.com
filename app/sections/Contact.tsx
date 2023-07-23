@@ -1,12 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { spaceGrotesk } from "../fonts/spaceGrotesk";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
 import AnimatedWords from "../animations/AnimatedWords";
 import { motion } from "framer-motion";
-import heartIcon from "../../public/heart icon.png";
 import ContactBackground from "../components/background/ContactBackground";
 
 const Contact = () => {

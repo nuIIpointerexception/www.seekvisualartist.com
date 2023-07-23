@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBarWindow from "../components/container/NavBarWindow";
 
 const NavBar = () => {

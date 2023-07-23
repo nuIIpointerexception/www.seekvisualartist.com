@@ -59,36 +59,7 @@ const HoverRectangle: React.FC<HoverRectangleProps> = ({
     return color;
   };
 
-  const getBorderStyle = () => {
-    const gradientColor = `linear-gradient(${angle}deg, rgba(255, 255, 255, 0) 0%, ${color} 100%)`;
-    return `${gradientColor}`;
-  };
-
-  const circleStyle = {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    top: "-1px",
-    left: "-1px",
-    borderRadius:
-      typeof borderRadius === "number" ? `${borderRadius}px` : borderRadius,
-    background: `radial-gradient(800px circle at ${cursorPosition.x}px ${cursorPosition.y}px, rgba(81, 88, 180, 0.4),transparent 40%)`,
-    opacity: isHovered ? 0.5 : 0,
-    transition: "opacity 0.3s ease-out",
-    pointerEvents: "none",
-  };
-
   const blurClasses = useBlur ? "inline-block px-1 py-1 backdrop-blur-md" : "";
-
-  const reverseGradient = (angle: number | null | undefined) => {
-    if (typeof angle !== "number" || isNaN(angle)) {
-      return 0;
-    }
-    const rotation = Math.floor(angle / 360);
-    const newAngle = angle - rotation * 360;
-    const reverseAngle = newAngle + 180;
-    return reverseAngle;
-  };
 
   return (
     <div
@@ -111,7 +82,6 @@ const HoverRectangle: React.FC<HoverRectangleProps> = ({
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
-      tabIndex={0}
       ref={containerRef}
     >
       {children}

@@ -59,22 +59,7 @@ const ProjectWindow: React.FC<ProjectWindowProps> = ({
     return color;
   };
 
-  const getBorderStyle = () => {
-    const gradientColor = `linear-gradient(${angle}deg, rgba(255, 255, 255, 0) 0%, ${color} 100%)`;
-    return `${gradientColor}`;
-  };
-
   const blurClasses = useBlur ? "inline-block px-1 py-1 backdrop-blur-md" : "";
-
-  const reverseGradient = (angle: number | null | undefined) => {
-    if (typeof angle !== "number" || isNaN(angle)) {
-      return 0;
-    }
-    const rotation = Math.floor(angle / 360);
-    const newAngle = angle - rotation * 360;
-    const reverseAngle = newAngle + 180;
-    return reverseAngle;
-  };
 
   return (
     <div
@@ -97,7 +82,6 @@ const ProjectWindow: React.FC<ProjectWindowProps> = ({
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
-      tabIndex={0}
       ref={containerRef}
     >
       {children}

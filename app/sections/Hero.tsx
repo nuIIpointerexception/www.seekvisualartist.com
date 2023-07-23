@@ -1,11 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
 import { spaceGrotesk } from "../fonts/spaceGrotesk";
 import { motion } from "framer-motion";
-import HoverRectangle from "../components/container/Container";
 import Logo from "../components/svg/Logo";
-import AnimatedLetters from "../animations/AnimatedLetters";
-import profile from "../../public/profile.webp";
 import HeroBackground from "../components/background/HeroBackground";
 
 const Hero = () => {

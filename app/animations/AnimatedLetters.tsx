@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
-import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedLettersProps = {
@@ -42,7 +41,7 @@ const AnimatedLetters: React.FC<AnimatedLettersProps> = ({ title, style }) => {
   };
 
   return (
-    <h1 aria-label={title} role="heading">
+    <h1 aria-label={title}>
       <motion.span
         ref={ref}
         className="flex max-w-[500px] flex-col overflow-hidden text-center text-[96px] font-extrabold leading-[0.8em] text-[#f8fbff] sm:text-[120px] sm:leading-[0.85em] md:max-w-[900px] md:text-[155.5px] lg:text-[215px]"

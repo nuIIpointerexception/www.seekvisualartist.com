@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
-import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedWordsProps = {
@@ -41,7 +40,7 @@ const AnimatedWords: React.FC<AnimatedWordsProps> = ({ title, style }) => {
   };
 
   return (
-    <h1 aria-label={title} role="heading">
+    <h1 aria-label={title}>
       <motion.span className={style} ref={ref}>
         {title.split(" ").map((word, index) => (
           <motion.div
