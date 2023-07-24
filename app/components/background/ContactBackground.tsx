@@ -10,9 +10,9 @@ const ContactBackground: React.FC = () => {
         loop
         muted
         playsInline
-        preload="false"
+        preload="auto"
       >
-        <source src="/contact.mp4" type="video/mp4" />
+        <source src="/contact.webm" type="video/webm" />
       </video>
       <div className="contact-bg" />
     </div>
