@@ -16,7 +16,7 @@ if (autoStart) {
   const params = url.searchParams;
 
   if (params.get("autoStart") !== null) {
-    const _ = new Blobity({
+    new Blobity({
       licenseKey: params.get("licenseKey"),
     });
   }

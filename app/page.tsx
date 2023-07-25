@@ -17,7 +17,6 @@ const Contact = dynamic(() => import("./sections/Contact"));
 const Footer = dynamic(() => import("./sections/Footer"));
 
 export default function Home() {
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const blobity = useBlobity(initialBlobityOptions);
 

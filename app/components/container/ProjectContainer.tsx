@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Grain from "../overlay/Grain";
 
-type ToolWindowProps = {
+type ProjectWindowProps = {
   width?: string | number;
   height?: string | number;
   color: string;
@@ -16,7 +16,7 @@ type ToolWindowProps = {
   children: React.ReactNode; // Add children prop to receive nested content
 };
 
-const ToolWindow: React.FC<ToolWindowProps> = ({
+const ProjectContainer: React.FC<ProjectWindowProps> = ({
   width,
   height,
   color,
@@ -76,6 +76,7 @@ const ToolWindow: React.FC<ToolWindowProps> = ({
         transition: "filter 0.3s ease-out, outline 0.3s ease-out",
         filter: isHovered ? "brightness(100%)" : "brightness(100%)",
         overflow: "hidden",
+        WebkitMask: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3))`,
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -83,6 +84,20 @@ const ToolWindow: React.FC<ToolWindowProps> = ({
       onBlur={() => setIsHovered(false)}
       ref={containerRef}
     >
+      {children}
+      <div
+        style={{
+          width: typeof width === "number" ? `${width}px` : width,
+          height: typeof height === "number" ? `${height}px` : height,
+          position: "absolute",
+          top: "0px",
+          left: "0px",
+          pointerEvents: "none",
+          opacity: 0.09,
+        }}
+      >
+        <Grain baseFrequency="1" numOctaves={5} />
+      </div>
       <div
         style={{
           position: "absolute",
@@ -98,7 +113,7 @@ const ToolWindow: React.FC<ToolWindowProps> = ({
           WebkitMask: `linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)`,
           WebkitMaskComposite: "destination-out",
           maskComposite: "exclude",
-          border: "2px solid transparent",
+          border: "1.3px solid transparent",
           pointerEvents: "none",
         }}
       />
@@ -113,29 +128,14 @@ const ToolWindow: React.FC<ToolWindowProps> = ({
             typeof borderRadius === "number"
               ? `${borderRadius}px`
               : borderRadius,
-          background: `radial-gradient(800px circle at ${cursorPosition.x}px ${cursorPosition.y}px, rgba(81, 88, 180, 0.4),transparent 40%)`,
+          background: `radial-gradient(1000px circle at ${cursorPosition.x}px ${cursorPosition.y}px, rgba(255, 255, 255, 0.2),transparent 40%)`,
           opacity: isHovered ? 0.5 : 0,
           transition: "opacity 0.3s ease-out",
           pointerEvents: "none",
         }}
       />
-      <div
-        style={{
-          width: typeof width === "number" ? `${width}px` : width,
-          height: typeof height === "number" ? `${height}px` : height,
-          position: "absolute",
-          top: "0px",
-          left: "0px",
-          pointerEvents: "none",
-          opacity: 0.2, // Changed from "0.2" to 0.2
-          WebkitMask: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3))`,
-        }}
-      >
-        <Grain baseFrequency="2" numOctaves={3} />
-      </div>
-      {children}
     </div>
   );
 };
 
-export default ToolWindow;
+export default ProjectContainer;

@@ -16,6 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-buddy/ide-toolbox-next": "^2.4.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "framer-motion": "^10.6.1",
     "gsap": "^3.11.5",

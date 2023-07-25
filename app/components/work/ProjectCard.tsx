@@ -7,7 +7,8 @@ import Image from "next/image";
 import AnimatedTitle from "../../animations/AnimatedTitle";
 import AnimatedBody from "../../animations/AnimatedBody";
 import { motion } from "framer-motion";
-import ProjectWindow from "../container/ProjectWindow";
+import ProjectContainer from "../container/ProjectContainer";
+import Container from "../container/Container";
 
 const ProjectCard = ({
   id,
@@ -33,10 +34,11 @@ const ProjectCard = ({
       initial="initial"
       animate="animate"
     >
-      <ProjectWindow // TODO: Add own implementation
+      <Container
         width="100%"
         height="100%"
         color="rgba(255, 255, 255, 0.1)"
+        useBlur={false}
         borderRadius={25}
         top="0px"
         left="0px"
@@ -145,7 +147,7 @@ const ProjectCard = ({
             ))}
           </div>
         </div>
-      </ProjectWindow>
+      </Container>
     </motion.div>
   );
 };

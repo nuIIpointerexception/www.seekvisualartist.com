@@ -16,7 +16,7 @@ type NavBarWindowProps = {
   children: React.ReactNode; // Add children prop to receive nested content
 };
 
-const NavBarWindow: React.FC<NavBarWindowProps> = ({
+const NavBarContainer: React.FC<NavBarWindowProps> = ({
   width,
   height,
   color,
@@ -138,4 +138,4 @@ const NavBarWindow: React.FC<NavBarWindowProps> = ({
   );
 };
 
-export default NavBarWindow;
+export default NavBarContainer;
