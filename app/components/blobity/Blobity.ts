@@ -66,7 +66,7 @@ export default class Blobity {
   private currentMagnetic: Magnetic | null = null;
   private kinetPresets = {
     normal: {
-      acceleration: 0.1,
+      acceleration: 0.2,
       friction: 0.35,
     },
     bouncy: {

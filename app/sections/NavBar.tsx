@@ -7,12 +7,11 @@ const NavBar = () => {
     // first prevent the default behavior
     e.preventDefault();
     // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
+    const href = e.currentTarget.href.split("#")[1];
+    window.scrollTo({
+        top: document.getElementById(href)?.offsetTop,
+        left: 0,
+        behavior: "smooth",
     });
   };
 

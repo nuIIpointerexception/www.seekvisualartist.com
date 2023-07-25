@@ -30,7 +30,7 @@ const ProjectCard = ({
           position: "relative",
         } as React.CSSProperties
       }
-      className={`relative z-10 h-[550px]  w-full items-stretch justify-center rounded-3xl bg-center py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
+      className={`relative z-10 h-[550px] w-full items-stretch justify-center py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
       initial="initial"
       animate="animate"
     >
@@ -38,7 +38,7 @@ const ProjectCard = ({
         width="100%"
         height="100%"
         color="rgba(255, 255, 255, 0.1)"
-        useBlur={false}
+        blur={false}
         borderRadius={25}
         top="0px"
         left="0px"
