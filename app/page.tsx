@@ -19,7 +19,7 @@ import Footer from "./sections/Footer";
 
 export default function Home() {
 
-  const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffectOnce(() => {
         setIsMobile(window.innerWidth < 768);
@@ -29,38 +29,38 @@ export default function Home() {
         setIsMobile(window.innerWidth < 768);
     });
 
-  useBlobity(initialBlobityOptions);
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-    });
-  }, []);
+    useBlobity(initialBlobityOptions);
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+        });
+    }, []);
 
-  return (
-    <>
-        <PreLoader />
-        <Blur />
-        <Color />
-        <NavBar />
-        <ScrollerMotion
-            disabled={isMobile}
-            spring={{ mass: 1, stiffness:800, bounce: 300, damping: 100 }}
-        >
-          <main
-            className="flex flex-col items-center justify-center"
-            style={{
-              backgroundColor: "#000000",
-            }}
-          >
-            <Hero />
-            <About />
-            <Work />
-            { /* <Blog /> TODO: Low Priority */ }
-            <Contact />
-            <Footer />
-          </main>
-        </ScrollerMotion>
-    </>
-  );
+    return (
+        <>
+            <PreLoader />
+            <Blur />
+            <Color />
+            <NavBar />
+            <ScrollerMotion
+                disabled={isMobile}
+                spring={{ mass: 1, stiffness:800, bounce: 300, damping: 100 }}
+            >
+                <main
+                    className="flex flex-col items-center justify-center"
+                    style={{
+                        backgroundColor: "#000000",
+                    }}
+                >
+                    <Hero />
+                    <About />
+                    <Work />
+                    { /* <Blog /> TODO: Low Priority */ }
+                    <Contact />
+                    <Footer />
+                </main>
+            </ScrollerMotion>
+        </>
+    );
 }

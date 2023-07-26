@@ -7,11 +7,14 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "warnOnUnsupportedTypeScriptVersion": false,
+    "tsconfigRootDir": "./",
+    "project": ["./tsconfig.json"],
+    "sourceType": "module",
+    "ecmaVersion": 2022,
     "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module"
+      "impliedStrict": true
+    }
   },
   "settings": {
     "react": {
@@ -26,7 +29,8 @@
     "react",
     "@typescript-eslint",
     "jsx-a11y",
-    "import"
+    "import",
+    "unicorn"
   ],
   "extends": [
     "next/core-web-vitals",
@@ -40,7 +44,64 @@
   "rules": {
     "react/prop-types": "off",
     "@next/next/no-img-element": "off",
-    "@next/next/no-html-link-for-pages": "off"
+    "@next/next/no-html-link-for-pages": "off",
+    "unicorn/escape-case": "error",
+    "unicorn/number-literal-case": "error",
+    "unicorn/empty-brace-spaces": "error",
+    "unicorn/prefer-array-find": "error",
+    "unicorn/prefer-array-flat": "error",
+    "unicorn/prefer-array-flat-map": "error",
+    "unicorn/prefer-array-index-of": "error",
+    "unicorn/prefer-at": "error",
+    "unicorn/prefer-negative-index": "error",
+    "unicorn/prefer-object-from-entries": "error",
+    "unicorn/prefer-prototype-methods": "error",
+    "unicorn/prefer-reflect-apply": "error",
+    "unicorn/prefer-includes": "error",
+    "unicorn/prefer-regexp-test": "error",
+    "unicorn/prefer-modern-math-apis": "error",
+    "unicorn/prefer-native-coercion-functions": "error",
+    "unicorn/prefer-module": "error",
+    "unicorn/prefer-logical-operator-over-ternary": "error",
+    "unicorn/prefer-export-from": "error",
+    "unicorn/prefer-date-now": "error",
+    "unicorn/prefer-default-parameters": "error",
+    "unicorn/prefer-optional-catch-binding": "warn",
+    "unicorn/prefer-string-starts-ends-with": "error",
+    "unicorn/prefer-string-trim-start-end": "error",
+    "unicorn/prefer-string-replace-all": "error",
+    "unicorn/prefer-string-slice": "error",
+    "unicorn/prefer-top-level-await": "error",
+    "unicorn/custom-error-definition": "error",
+    "unicorn/error-message": "error",
+    "unicorn/no-array-method-this-argument": "error",
+    "unicorn/no-object-as-default-parameter": "error",
+    "unicorn/no-useless-spread": "error",
+    "unicorn/no-useless-fallback-in-spread": "error",
+    "unicorn/no-useless-promise-resolve-reject": "error",
+    "unicorn/no-useless-undefined": "error",
+    "unicorn/throw-new-error": "error",
+    "prefer-const": "off",
+    "array-callback-return": ["error", { "allowImplicit": true }],
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "semi": ["error", "always"],
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/prefer-namespace-keyword": "off",
+    "@typescript-eslint/adjacent-overload-signatures": "off",
+    "@typescript-eslint/no-inferrable-types": ["warn", { "ignoreParameters": true, "ignoreProperties": true }],
+    "@typescript-eslint/no-unused-vars": ["warn", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
+    "@typescript-eslint/no-misused-promises": ["error", { "checksVoidReturn": false }],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/restrict-template-expressions": ["error", {
+      "allowNumber": true,
+      "allowBoolean": true,
+      "allowAny": false,
+      "allowNullish": false,
+      "allowRegExp": true
+    }]
   },
   "overrides": [
     {

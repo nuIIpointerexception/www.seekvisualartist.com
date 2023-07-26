@@ -47,7 +47,7 @@ type ContainerProps = {
     // gradient
     angle?: number;
     // grain
-    grain: boolean; // TODO: !!
+    grain?: boolean; // TODO: !!
     baseFrequency?: string;
     numOctaves?: number;
     // other
@@ -55,21 +55,21 @@ type ContainerProps = {
 };
 
 const Container: React.FC<ContainerProps> = ({
-                                                 width,
-                                                 height,
-                                                 top = 0,
-                                                 left = 0,
-                                                 color,
-                                                 spotlightColor = "rgba(255, 255, 255, 0.25)", // #ffffff just a bit of white
-                                                 accentColor = "rgba(255, 255, 255, 1.0)", // #c673ff Amethyst
-                                                 blur = true,
-                                                 borderRadius = 0,
-                                                 angle,
-                                                 // noise
-                                                 baseFrequency = "7",
-                                                 numOctaves = 3,
-                                                 children,
-                                             }) => {
+    width,
+    height,
+    top = 0,
+    left = 0,
+    color,
+    spotlightColor = "rgba(255, 255, 255, 0.25)", // #ffffff just a bit of white
+    accentColor = "rgba(255, 255, 255, 1.0)", // #c673ff Amethyst
+    blur = true,
+    borderRadius = 0,
+    angle,
+    // noise
+    baseFrequency = "7",
+    numOctaves = 3,
+    children,
+}) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -97,7 +97,7 @@ const Container: React.FC<ContainerProps> = ({
         <div
             className={`container ${blurClasses}`}
             style={{
-                "--angle": `${angle}deg`,
+                "--angle": typeof angle === "number" ? `${angle}deg` : angle,
                 "--width": typeof width === "number" ? `${width}px` : width,
                 "--height": typeof height === "number" ? `${height}px` : height,
                 "--gradient": getGradientStyle(),
