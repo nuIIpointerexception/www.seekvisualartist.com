@@ -78,7 +78,7 @@ Personally I'd recommend [Vercel](https://vercel.com/) or [Netlify](https://www.
 - [Bun](https://bun.sh/) - Task Runner
 - [ESLint](https://eslint.org/) - Linter
 - [Prettier](https://prettier.io/) - Code Formatter
-- [Blobity](https://blobity.dev/) - Cursor effects
+- [Blobity](https://blobity.dev/) - Cursor Effects
 - [usehooks-ts](https://usehooks-ts.com/) - Custom React Hooks
 
 ---

@@ -4,9 +4,7 @@ import Container from "../components/container/Container";
 
 const NavBar = () => {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
         e.preventDefault();
-        // get the href and remove everything before the hash (#)
         const href = e.currentTarget.href.split("#")[1];
         window.scrollTo({
             top: document.getElementById(href)?.offsetTop,
