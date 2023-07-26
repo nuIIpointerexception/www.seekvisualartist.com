@@ -7,8 +7,8 @@ import Image from "next/image";
 import AnimatedTitle from "../../animations/AnimatedTitle";
 import AnimatedBody from "../../animations/AnimatedBody";
 import { motion } from "framer-motion";
-import ProjectContainer from "../container/ProjectContainer";
 import Container from "../container/Container";
+import React from "react";
 
 const ProjectCard = ({
   id,
@@ -37,9 +37,10 @@ const ProjectCard = ({
       <Container
         width="100%"
         height="100%"
+        borderRadius={25}
         color="rgba(255, 255, 255, 0.1)"
         blur={false}
-        borderRadius={25}
+        grain={true}
         top="0px"
         left="0px"
         angle={0}

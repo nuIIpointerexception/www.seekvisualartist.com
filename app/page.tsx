@@ -1,6 +1,5 @@
 "use client";
 import {useEffect, useState} from "react";
-import dynamic from "next/dynamic";
 import { ScrollerMotion } from "scroller-motion";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
 import { useEffectOnce, useEventListener } from 'usehooks-ts';
@@ -11,12 +10,12 @@ import useBlobity from "./components/blobity/useBlobity";
 import Blur from "./components/overlay/Blur";
 import Color from "./components/overlay/Color";
 
-const NavBar = dynamic(() => import("./sections/NavBar"));
-const Hero = dynamic(() => import("./sections/Hero"));
-const About = dynamic(() => import("./sections/About"));
-const Work = dynamic(() => import("./sections/Work"));
-const Contact = dynamic(() => import("./sections/Contact"));
-const Footer = dynamic(() => import("./sections/Footer"));
+import NavBar from "./sections/NavBar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Work from "./sections/Work";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 export default function Home() {
 
