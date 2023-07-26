@@ -1,4 +1,4 @@
-# Portfolio v5 ![deployment](https://github.com/nuIIpointerexception/www.seekvisualartist.com/actions/workflows/nextjs.yml/badge.svg)
+# Portfolio v5 ![dev](https://github.com/nuIIpointerexception/www.seekvisualartist.com/actions/workflows/dev.yml/badge.svg) ![master](https://github.com/nuIIpointerexception/www.seekvisualartist.com/actions/workflows/master.yml/badge.svg)
 
 This is the fifth iteration of my portfolio website. It is built with Next.js, React and Tailwind CSS.
 
