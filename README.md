@@ -31,23 +31,21 @@ Check it out [here](https://www.seekvisualartist.com/)
 
 1. Clone the repository
 
-```bash
-git clone https://github.com/nuIIpointerexception/www.seekvisualartist.com/
-```
+    ```bash
+    git clone https://github.com/nuIIpointerexception/www.seekvisualartist.com/
+    ```
 
 2. Install dependencies
 
-bun:
-```bash
-bun install
-```
+    ```bash
+    bun install
+    ```
 
 3. Run the development server
 
-bun:
-```bash
-bun run dev
-```
+    ```bash
+    bun run dev
+    ```
 
 ---
 
@@ -58,17 +56,15 @@ Personally I'd recommend [Vercel](https://vercel.com/) or [Netlify](https://www.
 
 1. Build the app
 
-bun:
-```bash
-bun run build
-```
+    ```bash
+    bun run build
+    ```
 
 2. Start the production server
 
-bun:
-```bash
-bun run start
-```
+    ```bash
+    bun run start
+    ```
 
 ---
 
