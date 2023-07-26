@@ -18,6 +18,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-buddy/ide-toolbox-next": "^2.4.1",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "bun-types": "^0.7.0",
     "framer-motion": "^10.6.1",
     "gsap": "^3.11.5",
     "kinet": "^2.2.1",
@@ -33,7 +34,7 @@
     "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
-    "@types/node": "18.15.0",
+    "@types/node": "20.4.5",
     "@types/react": "18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
@@ -54,6 +55,7 @@
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-standard": "^26.0.0",
     "tailwind-scrollbar": "^3.0.0",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "typescript": "5.1.6"
   }
 }

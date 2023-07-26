@@ -1,3 +1,5 @@
+/// <reference lib="dom" />
+
 import Kinet from "kinet";
 import throttle from "lodash/throttle";
 

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Grain from "../overlay/Grain";
 import "./container.css";
-import {useEffectOnce, useEventListener} from "usehooks-ts";
+import {useEventListener} from "usehooks-ts";
 
 type CustomCSSProperties = React.CSSProperties & {
     "--width"?: string | number;
