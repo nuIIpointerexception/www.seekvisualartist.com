@@ -2,6 +2,7 @@ import { spaceGrotesk } from "../fonts/spaceGrotesk";
 import { motion } from "framer-motion";
 import Logo from "../components/svg/Logo";
 import HeroBackground from "../components/background/HeroBackground";
+import React from "react";
 
 const Hero = () => {
     return (

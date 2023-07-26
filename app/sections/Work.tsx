@@ -1,4 +1,5 @@
 import ProjectGrid from "../components/work/ProjectGrid";
+import React from "react";
 
 const Work = () => {
     return (

@@ -18,7 +18,7 @@ export const projects = [
         technologies: ["Rust", "C++"],
         github: "https://github.com/nuIIpointerexception/codewars",
         demo: "https://github.com/nuIIpointerexception/codewars",
-        image: ".//../../../public/projects/codewars.webp",
+        image: "/projects/codewars.webp",
         available: false,
     },
     {
@@ -29,7 +29,7 @@ export const projects = [
         technologies: ["Zig"],
         github: "https://github.com/nuIIpointerexception/",
         demo: "https://github.com/nuIIpointerexception/",
-        image: ".//../../../public/projects/construction.webp",
+        image: "/projects/construction.webp",
         available: false,
     },
 ];

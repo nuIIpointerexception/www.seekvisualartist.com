@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import {projects, ProjectProps} from "./projectDetails";
+import React from "react";
 
 const ProjectGrid = () => {
     return (

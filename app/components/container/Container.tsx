@@ -65,7 +65,6 @@ const Container: React.FC<ContainerProps> = ({
     blur = true,
     borderRadius = 0,
     angle,
-    // noise
     baseFrequency = "7",
     numOctaves = 3,
     children,
@@ -91,7 +90,7 @@ const Container: React.FC<ContainerProps> = ({
         return color;
     };
 
-    const blurClasses = blur ? "inline-block px-1 py-1 backdrop-blur-md" : "";
+    const blurClasses = blur ? "backdrop-blur-[64px]" : "";
 
     return (
         <div

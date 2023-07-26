@@ -6,6 +6,7 @@ import AnimatedTitle from "../animations/AnimatedTitle";
 import AnimatedWords from "../animations/AnimatedWords";
 import { motion } from "framer-motion";
 import ContactBackground from "../components/background/ContactBackground";
+import React from "react";
 
 const Contact = () => {
     return (

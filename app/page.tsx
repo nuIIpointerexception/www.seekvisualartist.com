@@ -1,7 +1,6 @@
 "use client";
-import {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { ScrollerMotion } from "scroller-motion";
-import { initialBlobityOptions } from "./utils/BlobityConfig";
 import { useEffectOnce, useEventListener } from 'usehooks-ts';
 
 import PreLoader from "./components/other/PreLoader";
@@ -22,6 +21,10 @@ export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffectOnce(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+        });
         setIsMobile(window.innerWidth < 768);
     });
 
@@ -29,13 +32,27 @@ export default function Home() {
         setIsMobile(window.innerWidth < 768);
     });
 
-    useBlobity(initialBlobityOptions);
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-        });
-    }, []);
+    useBlobity(
+        {
+            licenseKey: "opensource",
+            focusableElementsOffsetX: 4,
+            focusableElementsOffsetY: 4,
+            color: "#0E1016",
+            dotColor: "#ffffff",
+            invert: true,
+            focusableElements:
+                "[data-blobity], a:not([data-no-blobity]), h4:not([data-no-blobity]), li:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
+            font: "'Montserrat','Source Sans Pro',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif",
+            fontSize: 16,
+            fontWeight: 900,
+            opacity: 1.0,
+            fontColor: "#e4ded7",
+            zIndex: 100,
+            size: 50,
+            radius: 5,
+            magnetic: false,
+        }
+    );
 
     return (
         <>

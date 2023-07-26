@@ -49,7 +49,7 @@ const Blur = () => {
 
     return (
         <div
-            className="fixed inset-0 p-1 backdrop-blur-md"
+            className="fixed inset-0 p-1 backdrop-blur-[8px]"
             style={{
                 width: `${screenDimensions.width}px`,
                 height: `${screenDimensions.height}px`,
