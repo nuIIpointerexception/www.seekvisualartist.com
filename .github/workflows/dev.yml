@@ -1,0 +1,51 @@
+name: Development
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  setup:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+  install:
+    needs: setup
+    runs-on: self-hosted
+
+    steps:
+      - run: bun install
+
+  lint:
+    needs: install
+    runs-on: self-hosted
+
+    steps:
+      - run: bun run lint
+
+  tsc:
+    needs: install
+    runs-on: self-hosted
+
+    steps:
+      - run: bun run tsc
+
+  build:
+    needs: install
+    runs-on: self-hosted
+
+    steps:
+      - run: |
+          echo "${{ secrets.ENV_FILE }}" > .env.local
+      - run: bun run build
