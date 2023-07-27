@@ -61,22 +61,22 @@ export default function Home() {
             <Blur />
             <Color />
             <NavBar />
-            <ScrollerMotion
+            {/*<ScrollerMotion // Weird, stuff happening with this
                 disabled={isMobile}
                 spring={{ mass: 1, stiffness:800, bounce: 300, damping: 100 }}
+            >*/}
+            <main
+                className="flex flex-col items-center justify-center bg-black"
             >
-                <main
-                    className="flex flex-col items-center justify-center bg-bg-dark"
-                >
-                    <Hero />
-                    <About />
-                    <Work />
-                    <Tools />
-                    { /* <Blog /> TODO: Low Priority */ }
-                    <Contact />
-                    <Footer />
-                </main>
-            </ScrollerMotion>
+                <Hero />
+                <About />
+                <Work />
+                <Tools />
+                { /* <Blog /> TODO: Low Priority */ }
+                <Contact />
+                <Footer />
+            </main>
+            {/*</ScrollerMotion>*/}
         </>
     );
 }
