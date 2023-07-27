@@ -25,12 +25,7 @@ const NavBar = () => {
                 left="0px"
                 angle={0}
             >
-                <nav
-                    className="nowrap fixed bottom-10 left-0 right-0 z-50 my-0 mx-auto flex items-center justify-center gap-1 rounded-lg px-1 py-1 text-[#e4ded7] sm:w-[383.3px] md:p-2 lg:w-[391.3px]"
-                    style={{
-                        transform: "translateY(40px) translateX(0px)",
-                    }}
-                >
+                <nav className="nowrap fixed bottom-30 left-0 right-0 z-50 my-0 mx-auto flex items-center justify-center gap-1 rounded-lg px-1 py-1 text-[#e4ded7] sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
                     <Link
                         href="#home"
                         data-blobity-magnetic="false"

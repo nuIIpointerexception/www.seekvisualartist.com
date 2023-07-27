@@ -65,10 +65,7 @@ export default function Home() {
                 spring={{ mass: 1, stiffness:800, bounce: 300, damping: 100 }}
             >
                 <main
-                    className="flex flex-col items-center justify-center"
-                    style={{
-                        backgroundColor: "#000000",
-                    }}
+                    className="flex flex-col items-center justify-center bg-bg-dark"
                 >
                     <Hero />
                     <About />
