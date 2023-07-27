@@ -15,6 +15,7 @@ import About from "./sections/About";
 import Work from "./sections/Work";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import Tools from "./sections/Tools.tsx";
 
 export default function Home() {
 
@@ -37,7 +38,7 @@ export default function Home() {
             licenseKey: "opensource",
             focusableElementsOffsetX: 4,
             focusableElementsOffsetY: 4,
-            color: "#0E1016",
+            color: "#ffffff",
             dotColor: "#ffffff",
             invert: true,
             focusableElements:
@@ -46,8 +47,8 @@ export default function Home() {
             fontSize: 16,
             fontWeight: 900,
             opacity: 1.0,
-            fontColor: "#e4ded7",
-            zIndex: 100,
+            fontColor: "#ffffff",
+            zIndex: 35,
             size: 50,
             radius: 5,
             magnetic: false,
@@ -65,14 +66,12 @@ export default function Home() {
                 spring={{ mass: 1, stiffness:800, bounce: 300, damping: 100 }}
             >
                 <main
-                    className="flex flex-col items-center justify-center"
-                    style={{
-                        backgroundColor: "#000000",
-                    }}
+                    className="flex flex-col items-center justify-center bg-bg-dark"
                 >
                     <Hero />
                     <About />
                     <Work />
+                    <Tools />
                     { /* <Blog /> TODO: Low Priority */ }
                     <Contact />
                     <Footer />

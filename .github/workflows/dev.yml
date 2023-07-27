@@ -39,7 +39,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - run: bun run tsc
+      - run: bun run type-check
 
   build:
     needs: install

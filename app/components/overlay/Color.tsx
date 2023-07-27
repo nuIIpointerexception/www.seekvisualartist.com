@@ -2,25 +2,7 @@ import React from "react";
 
 const Color: React.FC = () => {
     return (
-        <div
-            style={{
-                position: "fixed",
-                width: "100%",
-                height: "100%",
-                zIndex: 47,
-                pointerEvents: "none",
-            }}
-        >
-            <div
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    background:
-            "linear-gradient(0deg, rgba(255, 255, 255, 1.0) 0%, rgba(0, 0, 0, 0.0) 0%)",
-                    opacity: 0.1,
-                }}
-            ></div>
-        </div>
+        <div className="fixed inset-0 p-1 w-full h-full bg-gradient-to-t from-bg-dark to-transparent opacity-40 pointer-events-none z-40"/>
     );
 };
 
