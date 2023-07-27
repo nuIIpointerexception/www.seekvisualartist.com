@@ -46,7 +46,7 @@ export default function Home() {
             fontSize: 16,
             fontWeight: 900,
             opacity: 1.0,
-            fontColor: "#e4ded7",
+            fontColor: "#0E1016",
             zIndex: 100,
             size: 50,
             radius: 5,

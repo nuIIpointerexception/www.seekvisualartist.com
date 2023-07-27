@@ -13,7 +13,7 @@ const Grain: React.FC<GrainProps> = ({
     w = "100%",
     h = "100%",
 }) => {
-    const viewBox = "0 0 300 300"; // Set a fixed viewBox for the grain pattern
+    const viewBox = "0 0 300 300";
 
     return (
         <svg
