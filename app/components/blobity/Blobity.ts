@@ -721,7 +721,7 @@ export default class Blobity {
             } else {
                 ctx.strokeStyle = `rgb(${this.color.r}, ${this.color.g}, ${this.color.b})`;
             }
-            ctx.lineWidth = 1; // You can adjust this value as needed
+            ctx.lineWidth = 1;
 
             if ((this.activeFocusedElement || this.activeTooltip) && !activateBlur) {
                 ctx.stroke();

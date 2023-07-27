@@ -38,7 +38,7 @@ export default function Home() {
             licenseKey: "opensource",
             focusableElementsOffsetX: 4,
             focusableElementsOffsetY: 4,
-            color: "#0E1016",
+            color: "#ffffff",
             dotColor: "#ffffff",
             invert: true,
             focusableElements:
@@ -48,7 +48,7 @@ export default function Home() {
             fontWeight: 900,
             opacity: 1.0,
             fontColor: "#ffffff",
-            zIndex: 100,
+            zIndex: 35,
             size: 50,
             radius: 5,
             magnetic: false,
