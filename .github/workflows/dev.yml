@@ -48,4 +48,4 @@ jobs:
     steps:
       - run: |
           echo "${{ secrets.ENV_FILE }}" > .env.local
-      - run: bun run build
+      - run: bun run build:dev

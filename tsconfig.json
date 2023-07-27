@@ -32,7 +32,9 @@
     "app/work-section/projectDetails.ts",
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "main/types/**/*.ts",
+    "dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
