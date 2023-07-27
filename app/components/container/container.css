@@ -1,0 +1,87 @@
+:root {
+    --width: 100%;
+    --height: 100%;
+    --gradient: #000;
+    --spotlight-color: rgb(255 255 255 / 40%);
+    --accent-color: #fff;
+    --accent-opacity: 0.15;
+    --border-radius: 0;
+    --top: 0;
+    --left: 0;
+    --is-hovered: 0;
+    --cursor-x: 0;
+    --cursor-y: 0;
+    --angle: 0;
+}
+
+.container {
+    width: var(--width);
+    height: var(--height);
+    background: var(--gradient);
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transition: filter 0.3s ease-out, outline 0.3s ease-out;
+    filter: brightness(100%);
+    overflow: hidden;
+    mask: linear-gradient(rgb(0 0 0 / 100%), rgb(0 0 0 / 30%));
+}
+
+.grain {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.13;
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background: linear-gradient(rgb(255 255 255 / 0%), rgb(255 255 255 / 0%)) padding-box,
+    linear-gradient(var(--angle, 0deg), rgb(255 255 255 / 0%), rgb(255 255 255 / 20%)) border-box;
+    mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
+    mask-composite: exclude;
+    border: 2px solid transparent;
+    pointer-events: none;
+}
+
+.border-highlight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background: radial-gradient(600px circle at var(--cursor-x, 0) var(--cursor-y, 0), rgb(255 255 255 / 70%) 0%, transparent 100%) padding-box,
+    radial-gradient(600px circle at var(--cursor-x, 0) var(--cursor-y, 0), rgb(255 255 255 / 70%) 0%, transparent 100%) border-box;
+    mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
+    mask-composite: exclude;
+    border: 2px solid transparent;
+    opacity: var(--is-hovered, 0);
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+.accent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background: radial-gradient(30% 60 circle at center -200px, var(--accent-color) 0%, transparent 100%);
+    opacity: var(--accent-opacity);
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+.spotlight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background: radial-gradient(30% 60% at var(--cursor-x, 50%) var(--cursor-y, 50%), var(--spotlight-color) 0%, transparent 100%);
+    opacity: var(--is-hovered, 0);
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
