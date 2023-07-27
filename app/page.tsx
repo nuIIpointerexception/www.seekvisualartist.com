@@ -15,6 +15,7 @@ import About from "./sections/About";
 import Work from "./sections/Work";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import Tools from "./sections/Tools.tsx";
 
 export default function Home() {
 
@@ -46,7 +47,7 @@ export default function Home() {
             fontSize: 16,
             fontWeight: 900,
             opacity: 1.0,
-            fontColor: "#0E1016",
+            fontColor: "#ffffff",
             zIndex: 100,
             size: 50,
             radius: 5,
@@ -70,6 +71,7 @@ export default function Home() {
                     <Hero />
                     <About />
                     <Work />
+                    <Tools />
                     { /* <Blog /> TODO: Low Priority */ }
                     <Contact />
                     <Footer />

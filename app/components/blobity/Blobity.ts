@@ -222,21 +222,8 @@ export default class Blobity {
             }
 
             if (!this.globalStyles) {
-                const dot = `<svg xmlns="http://www.w3.org/2000/svg" width="${this.options.dotSize}" height="${this.options.dotSize}"
-                viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill-rule="evenodd" fill="${this.options.dotColor}"/></svg>`;
-
                 this.globalStyles = document.createElement("style");
                 this.globalStyles.setAttribute("data-blobity-global-styles", "");
-                this.globalStyles.appendChild(
-                    document.createTextNode("* {cursor: inherit}")
-                );
-                this.globalStyles.appendChild(
-                    document.createTextNode(
-                        `html { cursor: url(data:image/svg+xml;base64,${btoa(dot)}) ${
-                            this.options.dotSize / 2
-                        } ${this.options.dotSize / 2}, auto;}`
-                    )
-                );
                 document.head.appendChild(this.globalStyles);
             }
         } else {
@@ -335,7 +322,6 @@ export default class Blobity {
         );
 
         document.body.removeChild(this.canvas);
-        document.documentElement.style.cursor = "";
 
         if (this.globalStyles) {
             document.head.removeChild(this.globalStyles);
@@ -693,11 +679,11 @@ export default class Blobity {
             const cumulativeVelocity = activateBlur
                 ? Math.min(
                     Math.sqrt(
-                        Math.pow(Math.abs(velocityX), 1.6) +
-                Math.pow(Math.abs(velocityY), 1.6)
-                    ), // so the distortion starts sooner
-                    40 // shape becomes too distorted once velocity is too big
-                ) / 1.1
+                        Math.pow(Math.abs(velocityX), 2) +
+                    Math.pow(Math.abs(velocityY), 2)
+                    ) * 2, // so the distortion starts sooner
+                    60 // shape becomes too distorted once velocity is too big
+                ) / 2
                 : 0;
 
             ctx.beginPath();
@@ -731,12 +717,15 @@ export default class Blobity {
                     );
                 });
 
-                ctx.fillStyle = gradient;
+                ctx.strokeStyle = gradient;
             } else {
-                ctx.fillStyle = `rgb(${this.color.r}, ${this.color.g}, ${this.color.b})`;
+                ctx.strokeStyle = `rgb(${this.color.r}, ${this.color.g}, ${this.color.b})`;
             }
+            ctx.lineWidth = 1; // You can adjust this value as needed
 
-            ctx.fill();
+            if ((this.activeFocusedElement || this.activeTooltip) && !activateBlur) {
+                ctx.stroke();
+            }
 
             if (this.activeTooltip) {
                 ctx.setTransform(scale / 100, 0, 0, scale / 100, x, y);
